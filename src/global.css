@@ -1,0 +1,208 @@
+@import url(https://fonts.googleapis.com/css?family=Urbanist:400,600);
+
+:root {
+  --bg: #151515;
+  --color-primary: #ffffff;
+  --color-secondary: #858585;
+  --border-color: #303030;
+}
+
+[data-theme="dark"] {
+  --bg: #151515;
+  --color-primary: #ffffff;
+  --color-secondary: #858585;
+  --border-color: #303030;
+}
+
+[data-theme="light"] {
+  --bg: #ffffff;
+  --color-primary: #404040;
+  --color-secondary: #808080;
+  --border-color: #c8c8c8;
+}
+.unstyled {
+  color: inherit;
+  font: inherit;
+  text-decoration: inherit;
+}
+
+.unstyled:hover {
+  color: inherit;
+  font: inherit;
+  text-decoration: inherit;
+}
+
+.color-secondary {
+  color: var(--color-secondary);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+* {
+  user-select: none;
+  font-family: inherit;
+  line-height: 1.3;
+  transition: background 0.3s;
+  overflow-x: hidden;
+}
+
+.pt6 {
+  padding-top: 1.57rem !important;
+}
+
+body {
+  font-family: "Urbanist";
+  font-weight: 400;
+  background-color: var(--bg);
+  background-image: url("/assets/Background.png");
+  background-repeat: repeat;
+  background-size: 30%;
+  color: var(--color-primary);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  min-height: 100vh;
+  min-width: 300px;
+  font-size: 20px;
+}
+
+.minw300 {
+  min-width: 300px;
+}
+
+.mt-6 {
+  margin-top: 5rem;
+}
+.def-gap {
+  gap: 2.5rem !important;
+}
+.nav {
+  margin-bottom: 55px;
+}
+.nav-button {
+  color: inherit;
+  background: transparent;
+  min-height: 35px;
+  min-width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+
+.menulink,
+.mobilemenu {
+  color: inherit;
+  font: inherit;
+  text-decoration: inherit;
+}
+.menulink:hover,
+.mobilemenu:hover {
+  color: inherit;
+  font: inherit;
+  text-decoration: inherit;
+}
+
+.menulink > li {
+  background-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 95%,
+    var(--color-primary) 95%,
+    var(--color-primary) 100%
+  );
+  color: var(--color-secondary);
+  padding-top: 15px;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position-x: right;
+  transition: background-size 400ms;
+  cursor: pointer;
+}
+
+.menulink > li:hover {
+  color: var(--color-primary);
+  background-size: 100% 100%;
+  background-position-x: left;
+}
+
+.nav {
+  padding-bottom: 40px;
+}
+
+.fitcontent {
+  width: fit-content;
+}
+
+.mobilenav {
+  position: fixed;
+  overflow: visible !important;
+  z-index: 11;
+  bottom: 5px;
+  width: 310px;
+  left: 50%;
+  transform: translate(-50%) !important;
+  background-color: var(--bg);
+  padding: 15px 20px;
+  border: 2px solid var(--border-color);
+  border-radius: 100px;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.mobilemenu p {
+  display: none;
+  transition: display 0.5s;
+}
+
+.mobilemenu.active p {
+  display: block;
+}
+
+.menulink.active > li {
+  font-weight: 600;
+  color: var(--color-primary);
+  background-size: 100% 100%;
+  background-position-x: left;
+}
+
+.stattitle {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.bottomborder {
+  border-bottom: 2px solid var(--border-color);
+}
+.font-title {
+  font-weight: 600;
+  font-size: 24.5px;
+}
+
+.weathericon {
+  max-width: 150px;
+  max-height: 100px;
+}
+
+.currenttemp {
+  font-size: 80px;
+}
+
+.currenttemp > sup {
+  top: -30px;
+  font-size: 40px;
+}
+.apparenttemp > sup {
+  top: -5px;
+  font-size: 12px;
+}
+
+@media (max-width: 767px) {
+  body {
+    margin-bottom: 90px;
+  }
+}
